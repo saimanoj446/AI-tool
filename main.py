@@ -4,7 +4,6 @@ import requests
 import os
 import re
 # Load environment variables
-load_dotenv()
 OPENROUTER_API_KEY = st.secrets["OPENROUTER_API_KEY"]
 if not OPENROUTER_API_KEY:
     st.error("Please set OPENROUTER_API_KEY environment variable")
