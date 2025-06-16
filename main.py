@@ -3,7 +3,6 @@ import PyPDF2
 import requests
 import os
 import re
-
 # Load environment variables
 load_dotenv()
 OPENROUTER_API_KEY = st.secrets["OPENROUTER_API_KEY"]
