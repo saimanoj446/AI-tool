@@ -8,7 +8,10 @@ import re
 
 # Load environment variables
 load_dotenv()
-OPENROUTER_API_KEY = "sk..."
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+if not OPENROUTER_API_KEY:
+    st.error("Please set OPENROUTER_API_KEY environment variable")
+    st.stop()
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 def extract_text_from_pdf(pdf_file):
